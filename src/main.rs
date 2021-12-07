@@ -50,6 +50,7 @@ fn run_part<F: Fn(&str) -> String>(part_id: u8, part: F, tests: &[TestCase], puz
             println!("success: {}", out);
         }
     }
+    println!("------------- Real Input -------------");
     let sol1 = part(&puzzle_input);
-    println!("------------- Real Input -------------\n{}\n\n", sol1);
+    println!("{}\n\n", sol1);
 }
