@@ -9,6 +9,7 @@ mod day04;
 mod day05;
 mod day06;
 mod day07;
+mod day08;
 mod util;
 
 fn get_solution(day: u8) -> Box<dyn Solution> {
@@ -20,12 +21,13 @@ fn get_solution(day: u8) -> Box<dyn Solution> {
         05 => Box::new(day05::Solution),
         06 => Box::new(day06::Solution),
         07 => Box::new(day07::Solution),
+        08 => Box::new(day08::Solution),
         _ => todo!("Solutions for day {} is not yet implemented", day)
     }
 }
 
 fn main() {
-    for current_day in [7] {
+    for current_day in [8] {
         let solution = get_solution(current_day);
 
         let input = read_to_string(format!("data/day{:0>2}", current_day)).unwrap_or("".to_string());
